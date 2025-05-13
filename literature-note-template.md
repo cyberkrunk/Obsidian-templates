@@ -14,11 +14,7 @@ This is an Obsidian template for creating literature notes. Originally based on 
 > [!Cite]
 > {{bibliography}}
 
->[!Synth]
->**Contribution**:: 
->
->**Related**:: {% for relation in relations | selectattr("citekey") %} [[@{{relation.citekey}}]]{% if not loop.last %}, {% endif%} {% endfor %}
->
+
 
 >[!md]
 {% for type, creators in creators | groupby("creatorType") -%}
